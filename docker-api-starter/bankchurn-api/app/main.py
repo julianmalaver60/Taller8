@@ -18,6 +18,7 @@ app = FastAPI(
 
 root_router = APIRouter()
 
+
 # Cuerpo de la respuesta en la raíz
 @root_router.get("/")
 def index(request: Request) -> Any:
@@ -25,7 +26,7 @@ def index(request: Request) -> Any:
     body = (
         "<html>"
         "<body style='padding: 10px;'>"
-        "<h1>Welcome to the API</h1>"
+        "<h1>Welcome to the API: JULIAN ANDRES MALAVER M</h1>"
         "<div>"
         "Check the docs: <a href='/docs'>here</a>"
         "</div>"
@@ -55,5 +56,5 @@ if __name__ == "__main__":
     logger.warning("Running in development mode. Do not run like this in production.")
     import uvicorn
 
-    # ejecución del servidor - host para ejecutar en servidor 
+    # ejecución del servidor - host para ejecutar en servidor
     uvicorn.run(app, host="0.0.0.0", port=8001, log_level="debug")
